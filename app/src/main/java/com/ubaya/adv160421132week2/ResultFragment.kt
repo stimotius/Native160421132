@@ -33,8 +33,8 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            val skor = ResultFragmentArgs.fromBundle(requireArguments()).skor
-            binding.txtScore.text = "Your score is $skor"
+            val score = ResultFragmentArgs.fromBundle(requireArguments()).skor
+            binding.txtScore.text = "Your score is $score"
         }
         binding.btnBack.setOnClickListener {
             val action = ResultFragmentDirections.actionResultToMainFragment()
